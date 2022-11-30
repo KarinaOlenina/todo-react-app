@@ -1,0 +1,50 @@
+.add-list {
+
+  ul {
+    margin-bottom: 5px;
+  }
+
+  &__popup {
+    z-index: 1;
+    position: absolute;
+    //position: relative;
+    width: 240px;
+    height: 140px;
+    background-color: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 18px;
+    left: 10px;
+
+    &-close-btn {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      cursor: pointer;
+    }
+
+    &-colors {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .badge {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        border: 2px solid transparent;
+
+        &.active {
+          border: 2px solid #637c84;
+        }
+      }
+    }
+
+    .button {
+      width: 100%;
+      margin-top: 12px;
+    }
+  }
+}
+

@@ -1,0 +1,48 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+/my-app/.idea/**/workspace.xml
+/my-app/.idea/**/tasks.xml
+/my-app/.idea/**/usage.statistics.xml
+/my-app/.idea/**/dictionaries
+/my-app/.idea/**/shelf
+
+# AWS User-specific
+/my-app/.idea/**/aws.xml
+
+# Generated files
+/my-app/.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+/my-app/.idea/**/dataSources/
+/my-app/.idea/**/dataSources.ids
+/my-app/.idea/**/dataSources.local.xml
+/my-app/.idea/**/sqlDataSources.xml
+/my-app/.idea/**/dynamic.xml
+/my-app/.idea/**/uiDesigner.xml
+/my-app/.idea/**/dbnavigator.xml
+
+# Gradle
+/my-app/.idea/**/gradle.xml
+/my-app/.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# File-based project format
+/my-app/*.iws
+
+# SonarLint plugin
+/my-app/.idea/sonarlint/
+/my-app/node_modules/

@@ -1,0 +1,133 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Покупки",
+      "colorId": 5
+    },
+    {
+      "id": 2,
+      "name": "Фронтенд",
+      "colorId": 4
+    },
+    {
+      "id": 4,
+      "name": "Книги",
+      "colorId": 2
+    },
+    {
+      "name": "Личное",
+      "colorId": 6,
+      "id": 5
+    },
+    {
+      "name": "Фильмы",
+      "colorId": 1,
+      "id": 6
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "listId": 2,
+      "text": "Изучить JavaScript",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "listId": 2,
+      "text": "Изучить паттерны проектирования",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "listId": 2,
+      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "listId": 2,
+      "text": "Redux (redux-observable, redux-saga)",
+      "completed": false
+    },
+    {
+      "listId": 4,
+      "text": "JS подробное руководство",
+      "completed": true,
+      "id": 6
+    },
+    {
+      "listId": 5,
+      "text": "Поздравить друга с ДР",
+      "completed": true,
+      "id": 8
+    },
+    {
+      "listId": 6,
+      "text": "Пираты Карибского моря ",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "listId": 1,
+      "text": "Апельсины",
+      "completed": true,
+      "id": 12
+    },
+    {
+      "listId": 1,
+      "text": "Яблоки",
+      "completed": true,
+      "id": 13
+    },
+    {
+      "listId": 1,
+      "text": "Вареники с вишней",
+      "completed": false,
+      "id": 15
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "hex": "#999999",
+      "name": "grey"
+    },
+    {
+      "id": 7,
+      "hex": "#102131",
+      "name": "black"
+    },
+    {
+      "id": 2,
+      "hex": "#93c47d",
+      "name": "green"
+    },
+    {
+      "id": 3,
+      "hex": "#6fa8dc",
+      "name": "blue"
+    },
+    {
+      "id": 6,
+      "hex": "#8e7cc3",
+      "name": "purple"
+    },
+    {
+      "id": 4,
+      "hex": "#c27ba0",
+      "name": "pink"
+    },
+    {
+      "id": 8,
+      "hex": "#e06666",
+      "name": "red"
+    },
+    {
+      "id": 5,
+      "hex": "#ffd966",
+      "name": "lime"
+    }
+  ]
+}
