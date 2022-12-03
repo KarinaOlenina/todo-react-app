@@ -28,13 +28,11 @@ const Task = ({id, text, list, completed, onRemove, onEdit, activeTask, onComple
                     </svg>
                 </label>
             </div>
-            <input
-                readOnly={!activeTask}
-                className={`${activeTask ? 'active-input' : ''}`}
-                onChange={e => {
-                    setInputValue(e.target.value)
-                }}
-                defaultValue={`${inputValue}`}/> {/*=> Передали текст задач*/}
+{/*            // readOnly={!activeTask}
+            // className={`${activeTask ? 'active-input' : ''}`}
+            // onChange={e => {setInputValue(e.target.value)}}
+            // defaultValue={`${inputValue}`}*/}
+            <p>{text}</p>
 
             <div className="tasks__items-row-actions">
                 <div

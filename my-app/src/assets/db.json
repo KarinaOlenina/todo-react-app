@@ -71,15 +71,9 @@
     },
     {
       "listId": 1,
-      "text": "Апельсины",
+      "text": "Апельсины ",
       "completed": true,
       "id": 12
-    },
-    {
-      "listId": 1,
-      "text": "Яблоки",
-      "completed": true,
-      "id": 13
     },
     {
       "listId": 1,

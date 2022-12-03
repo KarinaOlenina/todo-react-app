@@ -53,28 +53,32 @@ function App() {
             return;
         }
 
-        const newList = lists.map(list => {
-            if (list.id === listId) {
-                list.tasks = [...list.tasks.map(task => {
-                    if (task.id === taskObj.id) {
-                        return {
-                            ...task,
-                            text: newTaskText
-                        };
-                    } else
-                        return task;
-                })];
-            }
-            return list;
-        });
+        const newTask = {
+            "ListId": listId,
+            "text": newTaskText,
+            "completed": taskObj.completed,
+            "id": taskObj.id,
+        }
+
         axios
             .patch('http://localhost:3001/tasks/' + taskObj.id, {
                 text: newTaskText
             })
+            .then(() => {
+                const newList = lists.map(list => {
+                    if (list.id === listId) {
+                        list.tasks = list.tasks.map(task => {
+                            if (task.id === taskObj.id) return newTask;
+                            else return task;
+                        });
+                    }
+                    return list;
+                });
+                setLists(newList);
+            })
             .catch(() => {
                 alert('Не удалось обновить задачу');
             });
-        setLists(newList);
     };
 
     const onRemoveTask = (listId, taskId) => {
