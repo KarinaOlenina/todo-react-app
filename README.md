@@ -5,7 +5,6 @@
 <li> Install libs using <code>npm install react-router-dom</code></li>
 <li> Install JSON-Server - fake REST API provider for fast mock and testing <code>npm i json-server</code> </li>
 <li> Install SASS (to use it without FileWatcher) <code>npm i node-sass</code> </li>
-<li> Change cd <code>cd my-app</code> </li>
 <li> <code>json-server --watch dictionary-app/db.json --port 3001</code> to start json-server. </li>
 <li> <code>nmp start</code> from todo-app directory. </li>
 </ol>
