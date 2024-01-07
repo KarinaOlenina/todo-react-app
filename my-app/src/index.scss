@@ -80,13 +80,12 @@ body {
   left: 50%;
   top: 50%;
   width: 750px;
-  min-height: 500px;
-  max-height: 90%;
+  height: 600px;
   background-color: #fff;
   border-radius: 10px;
   transform: translate(-50%, -50%);
   font-size: 14px;
-  box-shadow: 3px 5px 10px #000;
+  box-shadow: 3px 5px 10px #0000006b;
 
   &__sidebar {
     background-color: #f4f6f8;
@@ -94,6 +93,7 @@ body {
     border-right: 1px solid #f1f1f1;
     border-radius: 10px 0 0 10px;
     padding: 30px 20px 5px 20px;
+    transition: width 0.3s ease-in-out;
 
     overflow: auto;
     -ms-overflow-style: none;
@@ -107,6 +107,10 @@ body {
       overflow-x: visible;
       overflow-y: auto;
     }
+  }
+
+  &__sidebar-menu {
+    display: none;
   }
 
   &__tasks {
@@ -124,12 +128,53 @@ body {
   }
 }
 
-//blur
+@media screen and (max-width: 900px) {
+  .todo {
+    width: 600px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .todo {
+    width: 500px;
+
+    &__sidebar {
+      width: 70px;
+
+      &:hover {
+        width: 200px;
+      }
+    }
+
+    &__tasks {
+      flex: 1;
+      padding: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .todo {
+    width: 400px;
+
+    &__sidebar {
+
+      &:hover {
+        width: 180px;
+      }
+    }
+    &__tasks {
+      flex: 1;
+      padding: 30px;
+    }
+  }
+}
+
 .tasks__items-row {
 
   p {
     background: none;
-    //color: #1a1a1a;
   }
 }
 

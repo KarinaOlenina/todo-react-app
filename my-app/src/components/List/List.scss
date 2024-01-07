@@ -16,7 +16,11 @@
     align-items: center;
     padding: 10px 0 10px 12px;
     cursor: pointer;
-    margin-bottom: 3px;
+    margin: 5px 0 5px 0;
+
+    @media screen and (max-width: 768px) {
+      padding: 10px 0 10px 7px;
+    }
 
     &:hover #{$self}__remove-icon {
       opacity: 0.2;
@@ -34,14 +38,13 @@
 
     &:hover {
       background-color: rgba(255, 355, 255, 0.7);
-      border-radius: 4px;
+      border-radius: 10px;
     }
 
     &.active {
       color: #31302e;
-      background-color: #f2c53c;
-      box-shadow: 0 3px 15px #b0afa4;
-      border-radius: 4px;
+      background-color: #ffffff;
+      border-radius: 10px;
     }
 
     .badge {
@@ -60,6 +63,10 @@
     i {
       display: inline-flex;
       margin-right: 8px;
+
+      @media screen and (max-width: 768px) {
+        margin-right: 10px;
+      }
 
       svg path {
         fill: #5b5b5b;

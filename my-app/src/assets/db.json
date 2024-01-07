@@ -2,26 +2,26 @@
   "lists": [
     {
       "id": 1,
-      "name": "Покупки",
+      "name": "Purchases",
       "colorId": 5
     },
     {
       "id": 2,
-      "name": "Фронтенд",
+      "name": "Frontend",
       "colorId": 4
     },
     {
       "id": 4,
-      "name": "Книги",
+      "name": "Books",
       "colorId": 2
     },
     {
-      "name": "Личное",
+      "name": "Personal",
       "colorId": 6,
       "id": 5
     },
     {
-      "name": "Фильмы",
+      "name": "Movies",
       "colorId": 1,
       "id": 6
     }
@@ -30,19 +30,13 @@
     {
       "id": 1,
       "listId": 2,
-      "text": "Изучить JavaScript",
+      "text": "Learn JavaScript",
       "completed": true
     },
     {
       "id": 2,
       "listId": 2,
-      "text": "Изучить паттерны проектирования",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
+      "text": "Explore design patterns",
       "completed": false
     },
     {
@@ -53,31 +47,31 @@
     },
     {
       "listId": 4,
-      "text": "JS подробное руководство",
+      "text": "JS detailed guide",
       "completed": true,
       "id": 6
     },
     {
       "listId": 5,
-      "text": "Поздравить друга с ДР",
+      "text": "Congratulate a friend on his birthday",
       "completed": true,
       "id": 8
     },
     {
       "listId": 6,
-      "text": "Пираты Карибского моря ",
+      "text": "Pirates of the Caribbean",
       "completed": false,
       "id": 11
     },
     {
       "listId": 1,
-      "text": "Апельсины ",
+      "text": "Oranges ",
       "completed": true,
       "id": 12
     },
     {
       "listId": 1,
-      "text": "Вареники с вишней",
+      "text": "Dumplings with cherries",
       "completed": false,
       "id": 15
     }

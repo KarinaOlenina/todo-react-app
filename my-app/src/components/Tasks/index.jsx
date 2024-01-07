@@ -11,14 +11,14 @@ import Task from "./Task";
 const Tasks = ({list, onEditTitle, onAddTask, onRemoveTask, onEditTask, activeTask, onCompleteTask, withoutEmpty}) => {
 
     const editTitle = () => {
-        const newTitle = window.prompt('Название списка', list.name);
+        const newTitle = window.prompt('Name of the list', list.name);
         if (newTitle) {
             onEditTitle(list.id, newTitle);
             axios
                 .patch('http://localhost:3001/lists/' + list.id, {
                     name: newTitle,
                 })
-                .catch(() => alert('Не удалось обновить название списка'))
+                .catch(() => alert('Failed to update the name of the list'))
         }
     }
 
@@ -28,13 +28,13 @@ const Tasks = ({list, onEditTitle, onAddTask, onRemoveTask, onEditTask, activeTa
                 <h2 style={{color: list.color.hex}} className='tasks__title'>
                     {list.name}
                     <img id='penSvg' onClick={editTitle}
-                         src={penSvg} alt='Кнопка исправить'/>
+                         src={penSvg} alt='The button will fix'/>
                 </h2>
             </Link>
 
             <div className="tasks__items">
                 {list['tasks'] && !list['tasks'].length && !withoutEmpty &&
-                    <h2>Нет активных задач</h2>} {/*=> Проверяем есть ли вообще лист с задачами*/}
+                    <h2>There are no active tasks</h2>}
                 {list['tasks'] && list['tasks'].map(task =>
                     <Task
                         key={task.id}
@@ -44,7 +44,7 @@ const Tasks = ({list, onEditTitle, onAddTask, onRemoveTask, onEditTask, activeTa
                         onComplete={onCompleteTask}
                         {...task}
                         list={list}
-                    />) /*пробросили все єлементы task поочередно*/
+                    />)
                 }
             </div>
             <AddTaskForm

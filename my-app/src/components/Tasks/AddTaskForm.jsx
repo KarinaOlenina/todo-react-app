@@ -15,12 +15,12 @@ const AddTaskForm = ({list, onAddTask}) => {
     const toggleFormVisible = () => {
         setFormVisible(!formVisible);
         setInputValue('');
-        setPlaceHolder('Текст задачи');
+        setPlaceHolder('Task text');
     }
 
     const addTask = () => {
         if (!inputValue) {
-            setPlaceHolder('Введите текст задачи');
+            setPlaceHolder('Enter the task text');
             return;
         }
 
@@ -39,7 +39,7 @@ const AddTaskForm = ({list, onAddTask}) => {
                 console.log(data)
                 toggleFormVisible();
             })
-            .catch(() => alert('Ошибка при добавлении задачи'))
+            .catch(() => alert('Error when adding a task'))
             .finally(() => {
                 setIsLoading(false);
             })
@@ -51,8 +51,8 @@ const AddTaskForm = ({list, onAddTask}) => {
                 ? (<div
                     onClick={toggleFormVisible}
                     className="tasks__form-new">
-                    <img src={addSvg} alt='Кнопка добавить задачу'/>
-                    <span>Добавить задачу</span>
+                    <img src={addSvg} alt='Add task button'/>
+                    <span>Add a task</span>
                 </div>)
                 : (<div className="tasks__form-add">
                     <input
@@ -65,17 +65,17 @@ const AddTaskForm = ({list, onAddTask}) => {
                         className='field'
                         type='text'
                         placeholder={placeHolder}
-                        onChange={e => setInputValue(e.target.value)}/> {/*=> Получаем событие и передаем в setInputValue*/}
+                        onChange={e => setInputValue(e.target.value)}/>
                     <button
                         disabled={isLoading}
                         onClick={addTask}
                         className='button'>
-                        {isLoading ? 'Добавление...' : ' Добавить задачу'}
+                        {isLoading ? 'Addition...' : ' Add a task'}
                     </button>
                     <button
                         onClick={toggleFormVisible}
                         className='button button-grey'>
-                        Отмена
+                        Cancellation
                     </button>
                 </div>)}
         </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 import './Tasks.scss';
 import editSvg from '../../assets/icons/edit.svg';
@@ -8,8 +8,6 @@ import taskCheckedSvg from '../../assets/icons/task-check.svg'
 
 const Task = ({id, text, list, completed, onRemove, onEdit, activeTask, onComplete}) => {
 
-    const [inputValue, setInputValue] = useState(text);
-
     const onChangeCheckBox = e => {
         onComplete(list.id, id, e.target.checked)
     }
@@ -18,8 +16,8 @@ const Task = ({id, text, list, completed, onRemove, onEdit, activeTask, onComple
         <div key={id} className="tasks__items-row">
             <div className="checkbox">
                 <input onChange={onChangeCheckBox} id={`task-${id}`} type="checkbox"
-                       checked={completed}/> {/*=> Создали уникальный id*/}
-                <label htmlFor={`task-${id}`}> {/*=> Передали уникальный id*/}
+                       checked={completed}/>
+                <label htmlFor={`task-${id}`}>
                     <svg width="11" height="8" viewBox="0 0 11 8" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.29999 1.20001L3.79999 6.70001L1.29999 4.20001" stroke="#999"
@@ -28,10 +26,6 @@ const Task = ({id, text, list, completed, onRemove, onEdit, activeTask, onComple
                     </svg>
                 </label>
             </div>
-{/*            // readOnly={!activeTask}
-            // className={`${activeTask ? 'active-input' : ''}`}
-            // onChange={e => {setInputValue(e.target.value)}}
-            // defaultValue={`${inputValue}`}*/}
             <p>{text}</p>
 
             <div className="tasks__items-row-actions">
@@ -40,12 +34,12 @@ const Task = ({id, text, list, completed, onRemove, onEdit, activeTask, onComple
                     onClick={() => onEdit(list.id, {id, text})}>
                     <img
                         src={`${activeTask ? taskCheckedSvg : editSvg}`}
-                        alt="Кнопка редактировать"/>
+                        alt="Edit button"/>
                 </div>
                 <div
                     onClick={() => onRemove(list.id, id)}>
                     <img src={removeSvg}
-                         alt="Кнопка удалить"/>
+                         alt="Delete button"/>
                 </div>
             </div>
         </div>
