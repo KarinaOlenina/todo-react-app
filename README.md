@@ -11,10 +11,9 @@
 
 ## 📖 Overview
 
-## Description
 The TODO Application is an interactive and user-friendly task management app that enables users to efficiently organize their responsibilities, create new tasks, edit them, and track the progress of their completion.
 
-## Key Features
+## 🔥Key Features
 
 1. **Task Creation:**
     - Add new tasks with defined names, descriptions, and color codes.
@@ -33,7 +32,7 @@ The TODO Application is an interactive and user-friendly task management app tha
 
 ![todo-gif.gif](public%2Ftodo-gif.gif)
 
-## Technical Details
+## 🧩Technical Details
 
 1. **Technologies Used:**
     - Implemented on the React platform using the `react-router-dom` library for routing.
