@@ -7,6 +7,26 @@ const backgrounds = Array.from({ length: 8 }, (_, index) => require(`../../asset
 const Background = () => {
     const [state, setState] = useState(false);
     const [selectedBackground, setSelectedBackground] = useState(getSavedBackground() || 1);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(true);
+        const images = backgrounds.map((background, index) => {
+            const img = new Image();
+            img.src = background;
+            img.alt = `back${index + 1}`;
+            return img;
+        });
+
+        Promise.all(images.map(img => img.decode()))
+            .then(() => {
+                setIsLoading(false);
+            })
+            .catch(error => {
+                console.error('Error loading images:', error);
+                setIsLoading(false);
+            });
+    }, []);
 
     useEffect(() => {
         document.querySelector('.change-background').className = `change-background b${selectedBackground}`;
@@ -36,17 +56,21 @@ const Background = () => {
             {state && (
                 <div className='add-list__popup'>
                     <img onClick={onClose} src={closeSvg} alt='Close window button' className="add-list__popup-close-btn" />
-                    <div className='add-list__popup-img'>
-                        {backgrounds.map((background, index) => (
-                            <img
-                                key={index}
-                                onClick={() => onClick(index + 1)}
-                                className={`background__img ${selectedBackground === index + 1 ? 'selected' : ''}`}
-                                src={background}
-                                alt={`back${index + 1}`}
-                            />
-                        ))}
-                    </div>
+                    {isLoading ? (
+                        <p>Loading...</p>
+                    ) : (
+                        <div className='add-list__popup-img'>
+                            {backgrounds.map((background, index) => (
+                                <img
+                                    key={index}
+                                    onClick={() => onClick(index + 1)}
+                                    className={`background__img ${selectedBackground === index + 1 ? 'selected' : ''}`}
+                                    src={background}
+                                    alt={`back${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
             )}
         </div>
